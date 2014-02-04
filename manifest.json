@@ -18,10 +18,10 @@
       }
    },
    "content_scripts": [ {
-      "js": [ "js/profiles/harvestapp.js" ],
+      "js": [ "jquery-2.1.0.min.js", "js/profiles/harvestapp.js" ],
       "matches": [ "https://*.harvestapp.com/time*", "http://*.harvestapp.com/time*", "http://*.harvestapp.dev/time*" ]
    }, {
-      "js": [ "js/profiles/basecamp.js" ],
+      "js": [ "jquery-2.1.0.min.js", "js/profiles/basecamp.js" ],
       "matches": [ "https://basecamp.com/*" ]
    }, {
       "css": [ "css/trello.css" ],
