@@ -37,9 +37,9 @@
    },
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfJWk+XHNjB+SmZtjzpsnwTWs+uGqzjwLig6iHtaI45ncGzQFbqoAiaqq1AVkNVFAyeT38u/WCzRtJZXA9nGN9SJKakJdbKHcihz8FOvLMiRLtDzr0IAHMEqlaSIkKn65SyNeXUMw0KBPpiosqh0vjoBecWz2xrV9nNc6wdjU5OQIDAQAB",
    "manifest_version": 2,
-   "name": "Harvest Time Tracker",
+   "name": "Enhanced Harvest Time Tracker",
    "permissions": [ "http://*/*", "https://*/*", "cookies", "webRequest" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.0.3",
+   "version": "2.0.4",
    "web_accessible_resources": [ "images/trello-timer-icon.png" ]
 }
