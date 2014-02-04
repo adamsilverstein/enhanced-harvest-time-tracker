@@ -1,0 +1,25 @@
+/* line 3, ../sass/trello.sass */
+.js-add-trello-timer.running {
+  background: #2887bd;
+  background: -webkit-linear-gradient(top, #2887bd, #1f6993);
+  background: -moz-linear-gradient(top, #2887bd, #1f6993);
+  background: -o-linear-gradient(top, #2887bd, #1f6993);
+  background: linear-gradient(to bottom, #2887bd, #1f6993);
+  color: white;
+}
+
+/* line 11, ../sass/trello.sass */
+.trello-timer-icon {
+  background-position: 4px -83px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 18px;
+  margin: 0 0 -3px 0;
+  position: relative;
+  width: 18px;
+}
+
+/* line 20, ../sass/trello.sass */
+.js-add-trello-timer:hover .trello-timer-icon, .trello-timer-icon.running {
+  background-position: 4px -122px;
+}
