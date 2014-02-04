@@ -40,7 +40,7 @@
       };
 
       BasecampProfile.prototype.addTimers = function() {
-        var item, items, _i, _len, _results;
+        var item, items, _i, _len, _results, listTitle;
         if (!this.platformLoaded) {
           return;
         }
@@ -48,16 +48,18 @@
         _results = [];
         for (_i = 0, _len = items.length; _i < _len; _i++) {
           item = items[_i];
+          listTitle = $( item ).closest( '.todolist' ).find( '.unlinked_title' ).text();
+
           if (!item.querySelector(".harvest-timer")) {
-            _results.push(this.addTimer(item));
+            _results.push(this.addTimer(item, listTitle));
           }
         }
         return _results;
       };
 
-      BasecampProfile.prototype.addTimer = function(item) {
+      BasecampProfile.prototype.addTimer = function(item, listTitle) {
         var data;
-        data = this.getDataForTimer(item);
+        data = this.getDataForTimer(item, listTitle);
         if (this.isTodoCompleted(item) || this.notEnoughInfo(data)) {
           return;
         }
@@ -65,7 +67,7 @@
         return this.notifyPlatformOfNewTimers();
       };
 
-      BasecampProfile.prototype.getDataForTimer = function(item) {
+      BasecampProfile.prototype.getDataForTimer = function(item, listTitle) {
         var itemName, link, linkParts, projectName;
         itemName = (item.querySelector("a[title]") || item.querySelector("a")).innerText;
         projectName = document.querySelector(this.projectNameSelector).innerText;
@@ -81,7 +83,7 @@
           },
           item: {
             id: linkParts[3],
-            name: itemName
+            name: ( ( 'undefined' !== typeof listTitle ) ? listTitle + ' :: ' : '' ) + itemName
           }
         };
       };
