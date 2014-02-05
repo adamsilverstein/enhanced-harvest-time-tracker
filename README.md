@@ -3,7 +3,7 @@ enhanced-harvest-time-tracker
 
 Adds list titles to head of item names for better tracking.
 
-Our team uses a bunch of Todo lists - each Todo list is named after the site covered, and each todo item is a standard task added from the project template.  This enhanced version of the harvest time tracker extension  prepends the *Todo List Title* in front of the *Todo Item Title* creating more context for the description.
+Our team uses a bunch of Todo lists - each Todo list is named after the client site or project, and each todo item is a standard task often repeated among various projects.  This enhanced version of the harvest time tracker extension  prepends the *Todo List Title* in front of the *Todo Item Title* creating more context for the description.
 
 Installing the enhanced version of the extension:
 
