@@ -48,7 +48,7 @@
         _results = [];
         for (_i = 0, _len = items.length; _i < _len; _i++) {
           item = items[_i];
-          listTitle = $( item ).closest( '.todolist' ).find( '.unlinked_title' ).text();
+          listTitle = $( item ).closest( '.todolist' ).find( 'h3 a' ).first().next().text();
 
           if (!item.querySelector(".harvest-timer")) {
             _results.push(this.addTimer(item, listTitle));
