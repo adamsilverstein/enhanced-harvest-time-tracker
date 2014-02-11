@@ -40,6 +40,6 @@
    "name": "Enhanced Harvest Time Tracker",
    "permissions": [ "http://*/*", "https://*/*", "cookies", "webRequest" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.0.4",
+   "version": "2.0.5",
    "web_accessible_resources": [ "images/trello-timer-icon.png" ]
 }
