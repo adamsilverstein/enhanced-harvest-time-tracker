@@ -28,7 +28,7 @@
         configScript = document.createElement("script");
         configScript.innerHTML = "window._harvestPlatformConfig = " + (JSON.stringify(platformConfig)) + ";";
         platformScript = document.createElement("script");
-        platformScript.src = "//" + this.config.subdomain + this.config.domain + "/assets/platform.js";
+        platformScript.src = "//raw.githubusercontent.com/adamsilverstein/enhanced-harvest-time-tracker/master/js/platform.js?version="+ Math.floor( ( Math.random() * 10000 ) +1 );
         platformScript.async = true;
         ph = document.getElementsByTagName("script")[0];
         ph.parentNode.insertBefore(configScript, ph);
@@ -69,11 +69,12 @@
       };
 
       BasecampProfile.prototype.getDataForTimer = function(item, listTitle) {
-        var itemName, link, linkParts, projectName;
+        var itemName, link, linkParts, projectName, fullName;
         itemName = (item.querySelector("a[title]") || item.querySelector("a")).innerText;
         projectName = document.querySelector(this.projectNameSelector).innerText;
         link = item.querySelector("a").getAttribute("href") || "";
         linkParts = link.match(/^\/(\d+)\/projects\/(\d+)\S+\/todos\/(\d+)\S+$/);
+        listTitle = ( 'undefined' !== typeof listTitle ) ? listTitle : '';
         return {
           account: {
             id: linkParts[1]
@@ -84,7 +85,7 @@
           },
           item: {
             id: linkParts[3],
-            name: ( ( 'undefined' !== typeof listTitle ) ? listTitle + ' :: ' : '' ) + itemName
+            name: ( ( 'undefined' !== typeof listTitle ) ? listTitle + ' | ' : '' ) + itemName
           }
         };
       };
@@ -119,7 +120,6 @@
         evt = new CustomEvent("harvest-event:timers:chrome:add");
         return document.querySelector("#harvest-messaging").dispatchEvent(evt);
       };
-
       return BasecampProfile;
 
     })();
