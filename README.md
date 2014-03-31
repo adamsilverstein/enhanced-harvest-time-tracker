@@ -15,3 +15,7 @@ Installing the enhanced version of the extension:
  * If you already ran the original Chrome extension you might need to restart your browser.
 
 Reload a Basecamp page and click a clock icon!
+
+*Upgrading to the latest version*
+git pull
+in extensions (chrome://extensions/) click 'reload' next to the extension
