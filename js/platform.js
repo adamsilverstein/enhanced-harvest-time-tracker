@@ -91,7 +91,7 @@
         },
         openIframe: function(e, t) {
             var n, r, a, o, s, l, d, u, m, c;
-            alert ( 'ok' );
+            promptUserForNotes(t);
             return a = {
                 app_name: this.config.applicationName,
                 service: t.service || window.location.hostname,
