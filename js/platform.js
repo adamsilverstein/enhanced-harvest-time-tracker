@@ -90,8 +90,11 @@
             return null != e && null != t && (t.account != null && (e = e.replace("%ACCOUNT_ID%", t.account.id)), t.project != null && (e = e.replace("%PROJECT_ID%", t.project.id)), t.item != null && (e = e.replace("%ITEM_ID%", t.item.id))), e
         },
         openIframe: function(e, t) {
-            var n, r, a, o, s, l, d, u, m, c;
-            promptUserForNotes(t);
+            var n, r, a, o, s, l, d, u, m, c,
+            note = prompt( 'Add a note:' );
+            if ( '' !== note && 'undefined' !== typeof t.item.name ) {
+            	t.item.name += ' | ' + note;
+            }
             return a = {
                 app_name: this.config.applicationName,
                 service: t.service || window.location.hostname,
