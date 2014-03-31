@@ -102,7 +102,7 @@
                 external_group_id: (d = t.project) != null ? d.id : void 0,
                 external_group_name: (u = t.project) != null ? u.name : void 0,
                 external_item_id: (m = t.item) != null ? m.id : void 0,
-                external_item_name: ( (c = t.item) != null ? c.name : void 0 ) + ( null !== note ) ? ' | ' + note : '',
+                external_item_name: ( (c = t.item) != null ? c.name : void 0 ) + ( ( null !== note ) ? ' | ' + note : ''),
             }, e && (e.className += " " + this.hpNamespace("iframe-open") + " "), s = "/platform/timer?" + i(a), this.config.xdm_integration ? this.config.xdm_integration === "atlassian" ? (s += "&xdm_integration=" + this.config.xdm_integration, AP.require("dialog", function(e) {
                 return e.create({
                     url: s
