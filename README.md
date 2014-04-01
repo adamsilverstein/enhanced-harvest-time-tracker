@@ -8,7 +8,7 @@ Our team uses a bunch of Todo lists - each Todo list is named after the client s
 ### Installing the Enhanced Harvest Time Tracker: ###
 
  * Remove the existing harvest time tracker if already installed
- * Git pull the Enhanced Harvest Time Tracker - https://github.com/adamsilverstein/enhanced-harvest-time-tracker
+ * Git pull or download the Enhanced Harvest Time Tracker
  * Visit Chrome’s Extensions page: chrome://extensions/
  * Check ‘Developer mode’ in the upper right
  * To install: drag the extracted extension folder onto the Chrome Extensions page or click 'Load unpacked extension'
@@ -18,7 +18,7 @@ Reload a Basecamp page and click a clock icon!
 
 **Upgrading to the latest version**
 * git pull
-* in extensions (chrome://extensions/) click 'reload' next to the extension - http://cl.ly/image/0N1F082q2o2v
+* in extensions (chrome://extensions/) click 'reload' next to the extension - see http://cl.ly/image/2a3S2u1z0v2t
 
 **Usage:**
 * Click the timer icon next to the todo item
