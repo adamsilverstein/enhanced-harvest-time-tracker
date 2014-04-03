@@ -28,7 +28,7 @@
         configScript = document.createElement("script");
         configScript.innerHTML = "window._harvestPlatformConfig = " + (JSON.stringify(platformConfig)) + ";";
         platformScript = document.createElement("script");
-        platformScript.src = "//raw.githubusercontent.com/adamsilverstein/enhanced-harvest-time-tracker/master/js/platform.js?version=123abc2";
+        platformScript.src = chrome.extension.getURL('js/platform.js');
         platformScript.async = true;
         ph = document.getElementsByTagName("script")[0];
         ph.parentNode.insertBefore(configScript, ph);

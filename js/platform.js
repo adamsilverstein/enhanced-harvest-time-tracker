@@ -89,10 +89,33 @@
         createPermalink: function(e, t) {
             return null != e && null != t && (t.account != null && (e = e.replace("%ACCOUNT_ID%", t.account.id)), t.project != null && (e = e.replace("%PROJECT_ID%", t.project.id)), t.item != null && (e = e.replace("%ITEM_ID%", t.item.id))), e
         },
+
+        getURLParam: function( name ) {
+            var url = window.location.href;
+            var query_string = url.split("?");
+            if ( undefined == query_string[1] ) {
+                return '';
+            }
+            var params = query_string[1].split("&");
+            var i = 0;
+            while (i < params.length) {
+                var param_item = params[i].split("=");
+                if (param_item[0] == name) {
+                    return decodeURIComponent(param_item[1]).trim();
+                }
+                i++;
+            }
+            return '';
+        },
+
         openIframe: function(e, t) {
             var n, r, a, o, s, l, d, u, m, c, note;
+
             if ( ! $( e.firstChild ).hasClass( 'running' ) ){
-            	note = prompt( 'Add a note:' );
+                note = this.getURLParam('note');
+                if ( null == note || '' == note  ) {
+            	   note = prompt( 'Add a note:' );
+                }
             }
 
             return a = {
