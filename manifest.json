@@ -1,6 +1,6 @@
 {
    "background": {
-      "scripts": [ "vendor/zepto.js", "js/background/request_header.js", "js/background/config.js", "js/background/cookie.js", "js/background/subdomain.js", "js/background/timesheet_version.js", "js/background.js" ]
+      "scripts": [ "vendor/zepto.js", "js/background/request_header.js", "js/background/config.js", "js/background/cookie.js", "js/background/subdomain.js", "js/background/timesheet_version.js", "js/background.js"]
    },
    "browser_action": {
       "default_icon": {
@@ -41,5 +41,5 @@
    "permissions": [ "http://*/*", "https://*/*", "cookies", "webRequest" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.0.5",
-   "web_accessible_resources": [ "images/trello-timer-icon.png" ]
+   "web_accessible_resources": [ "images/trello-timer-icon.png", "js/platform.js" ]
 }
