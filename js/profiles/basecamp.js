@@ -73,7 +73,7 @@
         itemName = (item.querySelector("a[title]") || item.querySelector("a")).innerText;
         projectName = document.querySelector(this.projectNameSelector).innerText;
         link = item.querySelector("a").getAttribute("href") || "";
-        linkParts = link.match(/^\/(\d+)\/projects\/(\d+)\S+\/todos\/(\d+)\S+$/);
+        linkParts = link.match(/^\/(\d+)\/projects\/(\d+)\/todos\/(\d+)$/);
         listTitle = ( 'undefined' !== typeof listTitle ) ? listTitle : '';
         return {
           account: {
