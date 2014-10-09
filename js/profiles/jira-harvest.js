@@ -13,6 +13,8 @@
                     });
                 }
 
+                note += " | " + prompt('Add a note');
+
                 // Set the note field of the harvest iframe to contain our ticket details
                 $('#notes').text(note);
 
