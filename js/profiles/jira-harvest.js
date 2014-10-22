@@ -13,6 +13,10 @@
                     });
                 }
 
+                if (response.hash_parameters.note) {
+                    note += " | " + decodeURIComponent(response.hash_parameters.note);
+                }
+
                 note += " | " + prompt('Add a note');
 
                 // Set the note field of the harvest iframe to contain our ticket details

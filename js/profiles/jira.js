@@ -6,12 +6,21 @@
         labels.push($(elem).text());
     });
 
+    // Parse window.location.hash to get our URI
+    var hash_parameters = {};
+    window.location.hash.substr(1).split("&").forEach(
+        function(item) {
+            hash_parameters[item.split("=")[0]] = item.split("=")[1];
+        }
+    );
+
     var data = {
         isTicket: true,
         ticket: {
+            hash_parameters: hash_parameters,
             id: $('#key-val').text(),
-            title: $('#summary-val').text(),
-            labels: labels
+            labels: labels,
+            title: $('#summary-val').text()
         }
     };
 
