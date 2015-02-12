@@ -34,6 +34,10 @@
       "js": [ "vendor/jquery-2.1.0.min.js", "js/profiles/jira-harvest.js" ],
       "matches": [ "https://platform.harvestapp.com/*JIRA*" ],
       "all_frames": true
+   }, {
+      "js": [ "vendor/jquery-2.1.0.min.js", "js/profiles/jira-strategery.js" ],
+      "matches": [ "https://harvest-jira.usestrategery.com/*" ],
+      "all_frames": true
    } ],
    "content_security_policy": "script-src 'self' https://*.harvestapp.com https://*.harvestapp.dev; object-src 'self'",
    "description": "Track time from Chrome and within popular project management tools.",
