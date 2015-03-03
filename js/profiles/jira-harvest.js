@@ -20,7 +20,7 @@
                 note += " | " + ( ( null == enteredNote ) ? '' : enteredNote );
 
                 // Set the note field of the harvest iframe to contain our ticket details
-                $('#notes').text(note);
+	            $( '.entry-notes' ).text( note );
 
             }
         }
