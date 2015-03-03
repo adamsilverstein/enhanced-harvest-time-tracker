@@ -16,11 +16,11 @@
                 if (response.hash_parameters.note) {
                     note += " | " + decodeURIComponent(response.hash_parameters.note);
                 }
-                var enteredNote = prompt('Add a note')
+                var enteredNote = prompt('Add a note');
                 note += " | " + ( ( null == enteredNote ) ? '' : enteredNote );
 
                 // Set the note field of the harvest iframe to contain our ticket details
-                $('#notes').text(note);
+	            $( '.entry-notes' ).text( note );
 
             }
         }
